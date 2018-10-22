@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="280dp" >
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"    
+     android:layout_margin ="8dp"
+   
+     android:id="@+id/titleTextView"
+    android:textColor="@color/colorAccent" 
+     android:textAppearance="@android:style/TextAppearance.DialogWindowTitle" />
+  
+  <TextView
+android:id="@+id/newHSTextView"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_gravity="center_horizontal"
+android:textSize="14sp"
+android:visibility="gone"/>
+  
+  <TextView
+  android:id="@+id/gridSizeTextView"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center_horizontal"
+  android:textSize="14sp"/>
+  
+  <TextView
+    android:id="@+id/scoreTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:textSize="14sp"/>
+  <TextView
+  android:id="@+id/highScoreTextView"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:layout_gravity="center_horizontal"
+  android:textSize="14sp" />
+  
+  <Button
+  android:text="Share Score"
+  android:layout_width="match_parent"
+  android:layout_height="62dp"
+  android:layout_marginLeft ="8dp"
+  android:layout_marginRight ="8dp"
+  android:id="@+id/shareBtn"
+  android:gravity="left|center_vertical"
+  android:drawablePadding="8dp"
+  android:theme="@style/PrimaryFlatButton" />
+  <Button
+    android:text="Exit To Main Menu"
+      android:layout_width="match_parent"
+      android:layout_height="62dp"
+      android:layout_marginLeft ="8dp"
+      android:layout_marginRight ="8dp"
+      android:layout_marginTop ="2dp"
+      android:id="@+id/exitBtn"
+      android:gravity="left|center_vertical"    
+  android:theme="@style/PrimaryFlatButton" 
+      android:drawablePadding="8dp"/>
+  <Button
+     android:text="Restart Game"
+     android:layout_width="match_parent"
+     android:layout_height="62dp"
+     android:layout_marginLeft ="8dp"
+     android:layout_marginRight ="8dp"
+     android:id="@+id/restartBtn"
+     android:gravity="left|center_vertical"     
+  android:theme="@style/PrimaryFlatButton" 
+     android:drawablePadding="8dp"   />
+</LinearLayout>

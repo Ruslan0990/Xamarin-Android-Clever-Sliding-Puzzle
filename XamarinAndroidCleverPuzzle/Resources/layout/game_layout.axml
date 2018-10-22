@@ -12,22 +12,26 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_alignParentLeft="true"
-      android:gravity ="center"
+       android:layout_centerVertical="true"
+      android:layout_gravity="fill"
       android:text ="User"
-      android:textSize="10pt"
+      android:textSize="14sp"
       android:layout_marginLeft="25px"      
-      android:textColor="#ff000000" 
+      android:textColor="@android:color/white"
+     android:singleLine="true"
       android:id="@+id/UsernameTextId"/>
     <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
       android:text ="Moves: "
       android:id="@+id/movesTextId"
-      android:gravity="center"
-      android:textSize="10pt"
+        android:layout_gravity="fill"
+      android:textSize="14sp"
       android:layout_marginRight="25px"
-      android:textColor="#ff000000" />
+     android:singleLine="true"      
+    android:textColor="@android:color/white" />
   </RelativeLayout>
   
   <GridLayout
@@ -55,6 +59,5 @@
     android:background="#ffff9100"
     android:layout_marginRight="12pt"
     android:layout_marginLeft="12pt"
-    android:layout_marginTop="2pt" />
-  
-</LinearLayout>
+    android:layout_marginTop="2pt"/>
+  </LinearLayout>

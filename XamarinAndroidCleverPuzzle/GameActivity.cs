@@ -23,13 +23,16 @@ namespace XamarinAndroidCleverPuzzle
         ArrayList tilesArray;
         int[] coordsArray;
         Point emptySpot;
-        int nx, ny, NumberOfMoves, NumChanges, tileWidth, gameViewWidth;
+        int gridSize,  NumberOfMoves, highScore, NumChanges, tileWidth, gameViewWidth;
+        string userName;
         int[][] board;
         PuzzleSolver solver = null;
         readonly Random rnd = new Random(Guid.NewGuid().GetHashCode());
         AudioManager audioManager;
         bool effects_enabled;
         TextView movesTextView;
+        ISharedPreferences pref;
+        ISharedPreferencesEditor editor;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -46,9 +49,11 @@ namespace XamarinAndroidCleverPuzzle
             gameViewWidth = Resources.DisplayMetrics.WidthPixels;
             NumChanges = 5;
 
-            var pref = PreferenceManager.GetDefaultSharedPreferences(this);
+            pref = PreferenceManager.GetDefaultSharedPreferences(this);
+            editor = pref.Edit();
             effects_enabled = pref.GetBoolean("EffectPreference", true);
-            nx = pref.GetInt("gridSize", 3);  ny = nx;
+            gridSize = pref.GetInt("gridSize", 3);
+            highScore = pref.GetInt("highScore", 0);
 
             audioManager = (AudioManager)GetSystemService(AudioService);
             if (effects_enabled)
@@ -61,7 +66,8 @@ namespace XamarinAndroidCleverPuzzle
                 audioManager.SetStreamVolume(Stream.System, 0, 0);
             }
             var usernameTextView = FindViewById<TextView>(Resource.Id.UsernameTextId);
-            usernameTextView.Text = pref.GetString("edit_text_preference", "" );
+            userName  = pref.GetString("edit_text_preference", ""); 
+            usernameTextView.Text = userName;
             movesTextView = FindViewById<TextView>(Resource.Id.movesTextId);
             movesTextView.Text = string.Format("Moves: {0}", 0);
 
@@ -79,24 +85,24 @@ namespace XamarinAndroidCleverPuzzle
             mainLayout.RemoveAllViews();
 
             // Calculate the width/height of the tiles
-            tileWidth = (int) (gameViewWidth / nx) ;
+            tileWidth = (int) (gameViewWidth / gridSize) ;
 
             // Initialize ArrayLists
             tilesArray = new ArrayList();
-            coordsArray = PuzzleMixer.GetPuzzleArray((nx * ny), ny, NumChanges, true, rnd);
+            coordsArray = PuzzleMixer.GetPuzzleArray((gridSize * gridSize), gridSize, NumChanges, true, rnd);
 
             board = CreateBoard();
 
             int tileIndex = 0;
   
-            for (int row = 0; row < nx; row++)
+            for (int row = 0; row < gridSize; row++)
             {
-                for (int col = 0; col < ny; col++)
+                for (int col = 0; col < gridSize; col++)
                 {
                     if (coordsArray[tileIndex] == 0) // this is the empty tile
                     {
                         emptySpot = new Point(row, col);
-                        board[row][col] = ny * nx - 1;
+                        board[row][col] = gridSize * gridSize - 1;
                         tileIndex++;
                         continue;
                     }
@@ -162,13 +168,28 @@ namespace XamarinAndroidCleverPuzzle
                     board[textPosX][textPosY] = board[emptyX][emptyY];
                     board[emptyX][emptyY] = tmp;
 
-
+                    NumberOfMoves++;
                     if (CheckCorrect() )   // player won!
                     {
-                         MakeTiles();
+                        bool newHighScore = false;
+                        // update high score
+                        if (NumberOfMoves < highScore || highScore == 0)
+                        {
+                            highScore = NumberOfMoves;
+                            editor.PutInt("highScore", highScore);
+                            editor.Apply();                           
+                            newHighScore = true;
+                        }
+                            var fragmentTrans = FragmentManager.BeginTransaction();
+                        fragmentTrans.AddToBackStack(null);
+                        var gameOverDialog = GameOverDialogFragment.NewInstance(gridSize, NumberOfMoves, highScore , userName, newHighScore);
+                        gameOverDialog.RestartGameEvent += Reset;
+                        gameOverDialog.ExitGameEvent += OnExitGame;
+                        gameOverDialog.Cancelable = false;
+                        gameOverDialog.Show(fragmentTrans, "GameOverDialog");
                     }
                     ResetSolver();
-                    NumberOfMoves++;
+                   
                     movesTextView.Text = string.Format("Moves: {0}", NumberOfMoves.ToString());
                     if (effects_enabled)
                     {
@@ -177,7 +198,7 @@ namespace XamarinAndroidCleverPuzzle
                 }
             }
         }
-        
+
         private GridLayout.LayoutParams GetTileLayoutParams(int x, int y)
         {
             // Create the specifications that establish in which row and column the tile is going to be rendered
@@ -194,8 +215,8 @@ namespace XamarinAndroidCleverPuzzle
 
         private void SetGameView()
         {
-            mainLayout.ColumnCount = nx;
-            mainLayout.RowCount = ny;
+            mainLayout.ColumnCount = gridSize;
+            mainLayout.RowCount = gridSize;
             mainLayout.LayoutParameters = new LinearLayout.LayoutParams(gameViewWidth, gameViewWidth);
             mainLayout.SetBackgroundColor(Color.Gray);
         }
@@ -213,10 +234,10 @@ namespace XamarinAndroidCleverPuzzle
 
         private int[][] CreateBoard()
         {
-            int[][] board = new int[nx][];
-            for (int i = 0; i < nx; ++i)
+            int[][] board = new int[gridSize][];
+            for (int i = 0; i < gridSize; ++i)
             {
-                board[i] = new int[ny];
+                board[i] = new int[gridSize];
             }
             return board;
         }
@@ -251,9 +272,9 @@ namespace XamarinAndroidCleverPuzzle
         private bool CheckCorrect()
         {
             int tileIndex=0;
-            for (int row = 0; row < nx; row++)
+            for (int row = 0; row < gridSize; row++)
             {
-                for (int col = 0; col < ny; col++)
+                for (int col = 0; col < gridSize; col++)
                 {
                     if (board[row][col] != tileIndex)
                     {
@@ -263,6 +284,14 @@ namespace XamarinAndroidCleverPuzzle
                 }
             }
             return true;
+        }
+        private void OnExitGame(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(MainActivity));
+            intent.AddFlags(ActivityFlags.ClearTop | ActivityFlags.NewTask);
+            StartActivity(intent);
+            Finish();
+            OverridePendingTransition(Resource.Animation.abc_fade_in, Resource.Animation.abc_slide_out_bottom);
         }
 
         private class TextTileView : TextView

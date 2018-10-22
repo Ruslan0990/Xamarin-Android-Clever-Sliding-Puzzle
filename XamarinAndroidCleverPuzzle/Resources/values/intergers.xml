@@ -2,5 +2,5 @@
 <resources>
   <integer name="seek_bar_default">3</integer>
   <integer name="seek_bar_max">7</integer>
-  <integer name="seek_bar_min">3</integer>
+  <integer name="seek_bar_min">2</integer>
 </resources>

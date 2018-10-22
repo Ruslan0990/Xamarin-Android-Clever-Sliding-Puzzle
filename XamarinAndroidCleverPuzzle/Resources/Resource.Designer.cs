@@ -2422,26 +2422,26 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f02006c
-			public const int avd_hide_password_1 = 2130837612;
+			// aapt resource value: 0x7f020070
+			public const int avd_hide_password_1 = 2130837616;
 			
-			// aapt resource value: 0x7f02006d
-			public const int avd_hide_password_2 = 2130837613;
+			// aapt resource value: 0x7f020071
+			public const int avd_hide_password_2 = 2130837617;
 			
-			// aapt resource value: 0x7f02006e
-			public const int avd_hide_password_3 = 2130837614;
+			// aapt resource value: 0x7f020072
+			public const int avd_hide_password_3 = 2130837618;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f02006f
-			public const int avd_show_password_1 = 2130837615;
+			// aapt resource value: 0x7f020073
+			public const int avd_show_password_1 = 2130837619;
 			
-			// aapt resource value: 0x7f020070
-			public const int avd_show_password_2 = 2130837616;
+			// aapt resource value: 0x7f020074
+			public const int avd_show_password_2 = 2130837620;
 			
-			// aapt resource value: 0x7f020071
-			public const int avd_show_password_3 = 2130837617;
+			// aapt resource value: 0x7f020075
+			public const int avd_show_password_3 = 2130837621;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -2462,55 +2462,67 @@ namespace XamarinAndroidCleverPuzzle
 			public const int design_snackbar_background = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int logo = 2130837595;
+			public const int ic_exit = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int navigation_empty_icon = 2130837596;
+			public const int ic_podium = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int notification_action_background = 2130837597;
+			public const int ic_replay = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int notification_bg = 2130837598;
+			public const int ic_share = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int notification_bg_low = 2130837599;
+			public const int logo = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int notification_bg_low_normal = 2130837600;
+			public const int navigation_empty_icon = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int notification_bg_low_pressed = 2130837601;
+			public const int notification_action_background = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int notification_bg_normal = 2130837602;
+			public const int notification_bg = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int notification_bg_normal_pressed = 2130837603;
+			public const int notification_bg_low = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int notification_icon_background = 2130837604;
-			
-			// aapt resource value: 0x7f02006a
-			public const int notification_template_icon_bg = 2130837610;
-			
-			// aapt resource value: 0x7f02006b
-			public const int notification_template_icon_low_bg = 2130837611;
+			public const int notification_bg_low_normal = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int notification_tile_bg = 2130837605;
+			public const int notification_bg_low_pressed = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int notify_panel_notification_icon_bg = 2130837606;
+			public const int notification_bg_normal = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int preference_list_divider_material = 2130837607;
+			public const int notification_bg_normal_pressed = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int tooltip_frame_dark = 2130837608;
+			public const int notification_icon_background = 2130837608;
+			
+			// aapt resource value: 0x7f02006e
+			public const int notification_template_icon_bg = 2130837614;
+			
+			// aapt resource value: 0x7f02006f
+			public const int notification_template_icon_low_bg = 2130837615;
 			
 			// aapt resource value: 0x7f020069
-			public const int tooltip_frame_light = 2130837609;
+			public const int notification_tile_bg = 2130837609;
+			
+			// aapt resource value: 0x7f02006a
+			public const int notify_panel_notification_icon_bg = 2130837610;
+			
+			// aapt resource value: 0x7f02006b
+			public const int preference_list_divider_material = 2130837611;
+			
+			// aapt resource value: 0x7f02006c
+			public const int tooltip_frame_dark = 2130837612;
+			
+			// aapt resource value: 0x7f02006d
+			public const int tooltip_frame_light = 2130837613;
 			
 			static Drawable()
 			{
@@ -2549,8 +2561,8 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f09009d
 			public const int UsernameTextId = 2131296413;
 			
-			// aapt resource value: 0x7f0900a5
-			public const int action0 = 2131296421;
+			// aapt resource value: 0x7f0900ad
+			public const int action0 = 2131296429;
 			
 			// aapt resource value: 0x7f09007c
 			public const int action_bar = 2131296380;
@@ -2573,17 +2585,17 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f09005a
 			public const int action_bar_title = 2131296346;
 			
-			// aapt resource value: 0x7f0900a2
-			public const int action_container = 2131296418;
+			// aapt resource value: 0x7f0900aa
+			public const int action_container = 2131296426;
 			
 			// aapt resource value: 0x7f09007d
 			public const int action_context_bar = 2131296381;
 			
-			// aapt resource value: 0x7f0900a9
-			public const int action_divider = 2131296425;
+			// aapt resource value: 0x7f0900b1
+			public const int action_divider = 2131296433;
 			
-			// aapt resource value: 0x7f0900a3
-			public const int action_image = 2131296419;
+			// aapt resource value: 0x7f0900ab
+			public const int action_image = 2131296427;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -2600,11 +2612,11 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f09005c
 			public const int action_mode_close_button = 2131296348;
 			
-			// aapt resource value: 0x7f0900a4
-			public const int action_text = 2131296420;
+			// aapt resource value: 0x7f0900ac
+			public const int action_text = 2131296428;
 			
-			// aapt resource value: 0x7f0900b2
-			public const int actions = 2131296434;
+			// aapt resource value: 0x7f0900ba
+			public const int actions = 2131296442;
 			
 			// aapt resource value: 0x7f09005d
 			public const int activity_chooser_view_content = 2131296349;
@@ -2639,8 +2651,8 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f090063
 			public const int buttonPanel = 2131296355;
 			
-			// aapt resource value: 0x7f0900a6
-			public const int cancel_action = 2131296422;
+			// aapt resource value: 0x7f0900ae
+			public const int cancel_action = 2131296430;
 			
 			// aapt resource value: 0x7f090045
 			public const int center = 2131296325;
@@ -2654,8 +2666,8 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f090073
 			public const int checkbox = 2131296371;
 			
-			// aapt resource value: 0x7f0900ae
-			public const int chronometer = 2131296430;
+			// aapt resource value: 0x7f0900b6
+			public const int chronometer = 2131296438;
 			
 			// aapt resource value: 0x7f09004e
 			public const int clip_horizontal = 2131296334;
@@ -2711,14 +2723,17 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f090030
 			public const int end = 2131296304;
 			
-			// aapt resource value: 0x7f0900b4
-			public const int end_padder = 2131296436;
+			// aapt resource value: 0x7f0900bc
+			public const int end_padder = 2131296444;
 			
 			// aapt resource value: 0x7f09003f
 			public const int enterAlways = 2131296319;
 			
 			// aapt resource value: 0x7f090040
 			public const int enterAlwaysCollapsed = 2131296320;
+			
+			// aapt resource value: 0x7f0900a8
+			public const int exitBtn = 2131296424;
 			
 			// aapt resource value: 0x7f090041
 			public const int exitUntilCollapsed = 2131296321;
@@ -2750,8 +2765,14 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f09000a
 			public const int ghost_view = 2131296266;
 			
+			// aapt resource value: 0x7f0900a4
+			public const int gridSizeTextView = 2131296420;
+			
 			// aapt resource value: 0x7f0900a1
 			public const int helpButtonId = 2131296417;
+			
+			// aapt resource value: 0x7f0900a6
+			public const int highScoreTextView = 2131296422;
 			
 			// aapt resource value: 0x7f090005
 			public const int home = 2131296261;
@@ -2762,11 +2783,11 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f090062
 			public const int icon = 2131296354;
 			
-			// aapt resource value: 0x7f0900b5
-			public const int icon_frame = 2131296437;
+			// aapt resource value: 0x7f0900bd
+			public const int icon_frame = 2131296445;
 			
-			// aapt resource value: 0x7f0900b3
-			public const int icon_group = 2131296435;
+			// aapt resource value: 0x7f0900bb
+			public const int icon_group = 2131296443;
 			
 			// aapt resource value: 0x7f09003a
 			public const int ifRoom = 2131296314;
@@ -2774,8 +2795,8 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f09005f
 			public const int image = 2131296351;
 			
-			// aapt resource value: 0x7f0900af
-			public const int info = 2131296431;
+			// aapt resource value: 0x7f0900b7
+			public const int info = 2131296439;
 			
 			// aapt resource value: 0x7f090059
 			public const int italic = 2131296345;
@@ -2795,8 +2816,8 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f090018
 			public const int line3 = 2131296280;
 			
-			// aapt resource value: 0x7f0900b7
-			public const int list = 2131296439;
+			// aapt resource value: 0x7f0900bf
+			public const int list = 2131296447;
 			
 			// aapt resource value: 0x7f09001d
 			public const int listMode = 2131296285;
@@ -2807,14 +2828,14 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f09008b
 			public const int logo = 2131296395;
 			
-			// aapt resource value: 0x7f0900c0
-			public const int masked = 2131296448;
+			// aapt resource value: 0x7f0900c8
+			public const int masked = 2131296456;
 			
-			// aapt resource value: 0x7f0900a8
-			public const int media_actions = 2131296424;
+			// aapt resource value: 0x7f0900b0
+			public const int media_actions = 2131296432;
 			
-			// aapt resource value: 0x7f0900bc
-			public const int message = 2131296444;
+			// aapt resource value: 0x7f0900c4
+			public const int message = 2131296452;
 			
 			// aapt resource value: 0x7f090031
 			public const int middle = 2131296305;
@@ -2837,20 +2858,23 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f09008c
 			public const int newGameButton = 2131296396;
 			
+			// aapt resource value: 0x7f0900a3
+			public const int newHSTextView = 2131296419;
+			
 			// aapt resource value: 0x7f090022
 			public const int none = 2131296290;
 			
 			// aapt resource value: 0x7f09001e
 			public const int normal = 2131296286;
 			
-			// aapt resource value: 0x7f0900b1
-			public const int notification_background = 2131296433;
+			// aapt resource value: 0x7f0900b9
+			public const int notification_background = 2131296441;
 			
-			// aapt resource value: 0x7f0900ab
-			public const int notification_main_column = 2131296427;
+			// aapt resource value: 0x7f0900b3
+			public const int notification_main_column = 2131296435;
 			
-			// aapt resource value: 0x7f0900aa
-			public const int notification_main_column_container = 2131296426;
+			// aapt resource value: 0x7f0900b2
+			public const int notification_main_column_container = 2131296434;
 			
 			// aapt resource value: 0x7f09004c
 			public const int parallax = 2131296332;
@@ -2864,14 +2888,14 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f09004d
 			public const int pin = 2131296333;
 			
-			// aapt resource value: 0x7f0900bb
-			public const int pref_container = 2131296443;
+			// aapt resource value: 0x7f0900c3
+			public const int pref_container = 2131296451;
 			
-			// aapt resource value: 0x7f0900bd
-			public const int preferenceScreen = 2131296445;
+			// aapt resource value: 0x7f0900c5
+			public const int preferenceScreen = 2131296453;
 			
-			// aapt resource value: 0x7f0900be
-			public const int preference_range_seek_bar = 2131296446;
+			// aapt resource value: 0x7f0900c6
+			public const int preference_range_seek_bar = 2131296454;
 			
 			// aapt resource value: 0x7f090006
 			public const int progress_circular = 2131296262;
@@ -2885,14 +2909,17 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f0900a0
 			public const int resetButtonId = 2131296416;
 			
+			// aapt resource value: 0x7f0900a9
+			public const int restartBtn = 2131296425;
+			
 			// aapt resource value: 0x7f09004a
 			public const int right = 2131296330;
 			
-			// aapt resource value: 0x7f0900b0
-			public const int right_icon = 2131296432;
+			// aapt resource value: 0x7f0900b8
+			public const int right_icon = 2131296440;
 			
-			// aapt resource value: 0x7f0900ac
-			public const int right_side = 2131296428;
+			// aapt resource value: 0x7f0900b4
+			public const int right_side = 2131296436;
 			
 			// aapt resource value: 0x7f09000c
 			public const int save_image_matrix = 2131296268;
@@ -2902,6 +2929,9 @@ namespace XamarinAndroidCleverPuzzle
 			
 			// aapt resource value: 0x7f09000e
 			public const int save_scale_type = 2131296270;
+			
+			// aapt resource value: 0x7f0900a5
+			public const int scoreTextView = 2131296421;
 			
 			// aapt resource value: 0x7f090029
 			public const int screen = 2131296297;
@@ -2951,17 +2981,20 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f090089
 			public const int search_voice_btn = 2131296393;
 			
-			// aapt resource value: 0x7f0900b8
-			public const int seekbar = 2131296440;
+			// aapt resource value: 0x7f0900c0
+			public const int seekbar = 2131296448;
 			
-			// aapt resource value: 0x7f0900b9
-			public const int seekbar_value = 2131296441;
+			// aapt resource value: 0x7f0900c1
+			public const int seekbar_value = 2131296449;
 			
 			// aapt resource value: 0x7f09008a
 			public const int select_dialog_listview = 2131296394;
 			
 			// aapt resource value: 0x7f09008d
 			public const int settingsButton = 2131296397;
+			
+			// aapt resource value: 0x7f0900a7
+			public const int shareBtn = 2131296423;
 			
 			// aapt resource value: 0x7f090074
 			public const int shortcut = 2131296372;
@@ -2990,8 +3023,8 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f090064
 			public const int spacer = 2131296356;
 			
-			// aapt resource value: 0x7f0900b6
-			public const int spinner = 2131296438;
+			// aapt resource value: 0x7f0900be
+			public const int spinner = 2131296446;
 			
 			// aapt resource value: 0x7f090008
 			public const int split_action_bar = 2131296264;
@@ -3008,8 +3041,8 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f09004b
 			public const int start = 2131296331;
 			
-			// aapt resource value: 0x7f0900a7
-			public const int status_bar_latest_event_content = 2131296423;
+			// aapt resource value: 0x7f0900af
+			public const int status_bar_latest_event_content = 2131296431;
 			
 			// aapt resource value: 0x7f090076
 			public const int submenuarrow = 2131296374;
@@ -3017,8 +3050,8 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f090087
 			public const int submit_area = 2131296391;
 			
-			// aapt resource value: 0x7f0900ba
-			public const int switchWidget = 2131296442;
+			// aapt resource value: 0x7f0900c2
+			public const int switchWidget = 2131296450;
 			
 			// aapt resource value: 0x7f09001f
 			public const int tabMode = 2131296287;
@@ -3047,14 +3080,17 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f090015
 			public const int textinput_error = 2131296277;
 			
-			// aapt resource value: 0x7f0900ad
-			public const int time = 2131296429;
+			// aapt resource value: 0x7f0900b5
+			public const int time = 2131296437;
 			
 			// aapt resource value: 0x7f09001c
 			public const int title = 2131296284;
 			
 			// aapt resource value: 0x7f090071
 			public const int titleDividerNoCustom = 2131296369;
+			
+			// aapt resource value: 0x7f0900a2
+			public const int titleTextView = 2131296418;
 			
 			// aapt resource value: 0x7f09006f
 			public const int title_template = 2131296367;
@@ -3095,8 +3131,8 @@ namespace XamarinAndroidCleverPuzzle
 			// aapt resource value: 0x7f090016
 			public const int view_offset_helper = 2131296278;
 			
-			// aapt resource value: 0x7f0900bf
-			public const int visible = 2131296447;
+			// aapt resource value: 0x7f0900c7
+			public const int visible = 2131296455;
 			
 			// aapt resource value: 0x7f09003c
 			public const int withText = 2131296316;
@@ -3296,115 +3332,118 @@ namespace XamarinAndroidCleverPuzzle
 			public const int game_layout = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int notification_action = 2130968618;
+			public const int GameOverView = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int notification_action_tombstone = 2130968619;
+			public const int notification_action = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int notification_media_action = 2130968620;
+			public const int notification_action_tombstone = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int notification_media_cancel_action = 2130968621;
+			public const int notification_media_action = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_template_big_media = 2130968622;
+			public const int notification_media_cancel_action = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_template_big_media_custom = 2130968623;
+			public const int notification_template_big_media = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_template_big_media_narrow = 2130968624;
+			public const int notification_template_big_media_custom = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_template_big_media_narrow_custom = 2130968625;
+			public const int notification_template_big_media_narrow = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_custom_big = 2130968626;
+			public const int notification_template_big_media_narrow_custom = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_icon_group = 2130968627;
+			public const int notification_template_custom_big = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_lines_media = 2130968628;
+			public const int notification_template_icon_group = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_media = 2130968629;
+			public const int notification_template_lines_media = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_media_custom = 2130968630;
+			public const int notification_template_media = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_part_chronometer = 2130968631;
+			public const int notification_template_media_custom = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_part_time = 2130968632;
+			public const int notification_template_part_chronometer = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int preference = 2130968633;
+			public const int notification_template_part_time = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int preference_category = 2130968634;
+			public const int preference = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int preference_category_material = 2130968635;
+			public const int preference_category = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int preference_dialog_edittext = 2130968636;
+			public const int preference_category_material = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int preference_dropdown = 2130968637;
+			public const int preference_dialog_edittext = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int preference_dropdown_material = 2130968638;
+			public const int preference_dropdown = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int preference_information = 2130968639;
+			public const int preference_dropdown_material = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int preference_information_material = 2130968640;
+			public const int preference_information = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int preference_list_fragment = 2130968641;
+			public const int preference_information_material = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int preference_material = 2130968642;
+			public const int preference_list_fragment = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int preference_recyclerview = 2130968643;
+			public const int preference_material = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int preference_widget_checkbox = 2130968644;
+			public const int preference_recyclerview = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int preference_widget_seekbar = 2130968645;
+			public const int preference_widget_checkbox = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int preference_widget_seekbar_material = 2130968646;
+			public const int preference_widget_seekbar = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int preference_widget_switch = 2130968647;
+			public const int preference_widget_seekbar_material = 2130968647;
 			
 			// aapt resource value: 0x7f040048
-			public const int preference_widget_switch_compat = 2130968648;
+			public const int preference_widget_switch = 2130968648;
 			
 			// aapt resource value: 0x7f040049
-			public const int select_dialog_item_material = 2130968649;
+			public const int preference_widget_switch_compat = 2130968649;
 			
 			// aapt resource value: 0x7f04004a
-			public const int select_dialog_multichoice_material = 2130968650;
+			public const int select_dialog_item_material = 2130968650;
 			
 			// aapt resource value: 0x7f04004b
-			public const int select_dialog_singlechoice_material = 2130968651;
+			public const int select_dialog_multichoice_material = 2130968651;
 			
 			// aapt resource value: 0x7f04004c
-			public const int SettingsLayout = 2130968652;
+			public const int select_dialog_singlechoice_material = 2130968652;
 			
 			// aapt resource value: 0x7f04004d
-			public const int support_simple_spinner_dropdown_item = 2130968653;
+			public const int SettingsLayout = 2130968653;
 			
 			// aapt resource value: 0x7f04004e
-			public const int tooltip = 2130968654;
+			public const int support_simple_spinner_dropdown_item = 2130968654;
+			
+			// aapt resource value: 0x7f04004f
+			public const int tooltip = 2130968655;
 			
 			static Layout()
 			{
@@ -4263,6 +4302,9 @@ namespace XamarinAndroidCleverPuzzle
 			
 			// aapt resource value: 0x7f0a0174
 			public const int Preference_TextAppearanceMaterialSubhead = 2131362164;
+			
+			// aapt resource value: 0x7f0a01a3
+			public const int PrimaryFlatButton = 2131362211;
 			
 			// aapt resource value: 0x7f0a0038
 			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131361848;

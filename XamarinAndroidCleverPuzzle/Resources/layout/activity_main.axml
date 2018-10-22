@@ -24,13 +24,13 @@
       android:layout_height="wrap_content"
       android:text="NEW GAME"
       android:layout_marginRight="12pt"
-      android:layout_marginLeft="12pt" />
+      android:layout_marginLeft="12pt"       />
     <Button
-        android:id="@+id/settingsButton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="12pt"
-        android:layout_marginLeft="12pt"
-        android:text="SETTINGS"/>
+      android:id="@+id/settingsButton"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="SETTINGS"
+      android:layout_marginRight="12pt"
+      android:layout_marginLeft="12pt"   />
 </LinearLayout>  
 </ScrollView>
