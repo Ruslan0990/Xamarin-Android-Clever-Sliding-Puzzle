@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:asp="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/preferenceScreen"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  
+  <PreferenceCategory android:title="General">
+    
+  <EditTextPreference
+    android:key="edit_text_preference"
+    android:dialogTitle="Type in your username"
+    android:title="Set Username"
+    android:defaultValue=""
+    android:inputType="text"
+    android:singleLine="true" />
+
+    <SeekBarPreference
+      android:id="@+id/preference_range_seek_bar"
+      android:layout_height="wrap_content"
+      android:key="gridSize"
+      android:title="Grid Size"
+      android:defaultValue="@integer/seek_bar_default"
+      android:max="@integer/seek_bar_max"
+      asp:min="@integer/seek_bar_min" />
+
+    <SwitchPreferenceCompat
+    android:key="EffectPreference"
+    android:title="@string/effects"
+    android:defaultValue="true"
+    android:summaryOn="@string/enabled"
+    android:summaryOff="@string/disabled"/>
+  </PreferenceCategory>
+  
+  <PreferenceCategory
+   android:title="@string/about">
+
+    <Preference android:title="@string/created_by"
+	            android:summary="@string/created_by_summary">
+      <intent android:action="android.intent.action.VIEW"
+              android:data="https://twitter.com/Ruslan_0990" /> 
+    </Preference>
+    
+    <Preference android:title="@string/xamarin"
+          android:summary="@string/xamarinSummary">
+      <intent android:action="android.intent.action.VIEW"
+              android:data="https://xamarin.com" />
+    </Preference>
+  </PreferenceCategory>
+  
+</PreferenceScreen>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">XamarinAndroidCleverPuzzle</string>
+    <string name="enabled">Enabled</string>
+  <string name="disabled">Disabled</string>
+  <string name="changedSettings">Settings Changed</string>  
+
+  <string name="settings">Settings</string>
+  <string name="effects">Sound Effects</string>
+
+  <string name="about">About</string>
+  <string name="created_by">Created By</string>
+  <string name="created_by_summary">Ruslan0990</string>
+
+  <string name="xamarin">Xamarin</string>
+  <string name="xamarinSummary">Built in C# using Xamarin.</string>
+</resources>
