@@ -6,7 +6,6 @@ using Android.Views;
 
 namespace XamarinAndroidCleverPuzzle
 {
-
     [Activity(Label = "@string/settings",  ScreenOrientation = ScreenOrientation.Portrait)]
     public class SettingsActivity : AppCompatActivity
     {

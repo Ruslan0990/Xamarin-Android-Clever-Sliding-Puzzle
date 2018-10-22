@@ -6,8 +6,6 @@ using Android.Support.Graphics.Drawable;
 using Android.App;
 using Android.Content;
 using Android.Graphics;
-using System.IO;
-using Android.Views.Animations;
 
 namespace XamarinAndroidCleverPuzzle
 {
@@ -45,7 +43,7 @@ namespace XamarinAndroidCleverPuzzle
             var restartIcon = VectorDrawableCompat.Create(Resources, Resource.Drawable.ic_replay, view.Context.Theme);
             restartBtn.SetCompoundDrawablesWithIntrinsicBounds(restartIcon, null, null, null);
 
-            var exitButton = view.FindViewById<Button>(Resource.Id.exitBtn);
+            var exitButton = view.FindViewById<Button>(Resource.Id.exitBtn);     
             exitButton.Click += (object sender, EventArgs e) =>
             {
                 Dismiss();
@@ -71,7 +69,6 @@ namespace XamarinAndroidCleverPuzzle
                 NewHSTextView.Text = "New High Score!";
                 var podiumIcon = VectorDrawableCompat.Create(Resources, Resource.Drawable.ic_podium, view.Context.Theme);
                 NewHSTextView.SetCompoundDrawablesWithIntrinsicBounds(null, null, null, podiumIcon);
-
             }
             var GridSizeTextView = view.FindViewById<TextView>(Resource.Id.gridSizeTextView);
             GridSizeTextView.Text = "Grid Size: " + gridSize.ToString();
@@ -91,9 +88,9 @@ namespace XamarinAndroidCleverPuzzle
                 {                   
                     using (var shareIntent = new Intent(Intent.ActionSend))
                     {
-                        shareIntent.SetType("message/plain");
+                        shareIntent.SetType("text/plain");
                         shareIntent.PutExtra(Intent.ExtraSubject, "Awesome game!");
-                        shareIntent.PutExtra(Intent.ExtraText, "Hey, I just earned " + score.ToString() + " points in Clever Sliding Puzzle." );
+                        shareIntent.PutExtra(Intent.ExtraText, "Hey, I just finished a match of Clever Sliding Puzzle in " + score.ToString() + " moves." );
                         shareIntent.AddFlags(ActivityFlags.GrantReadUriPermission);
                         StartActivity(Intent.CreateChooser(shareIntent, "Share via"));
                     }
