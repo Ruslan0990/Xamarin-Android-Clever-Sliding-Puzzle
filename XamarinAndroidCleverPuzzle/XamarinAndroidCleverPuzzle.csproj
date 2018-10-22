@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="GameActivity.cs" />
     <Compile Include="GameOverDialogFragment.cs" />
+    <Compile Include="HighScoresActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +104,9 @@
     <PackageReference Include="Xamarin.Android.Support.v14.Preference">
       <Version>27.0.2.1</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.v7.Preference">
       <Version>27.0.2.1</Version>
     </PackageReference>
@@ -143,6 +147,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_share.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\highScores_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

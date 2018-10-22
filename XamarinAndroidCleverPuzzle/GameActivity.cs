@@ -24,7 +24,7 @@ namespace XamarinAndroidCleverPuzzle
         int[] coordsArray;
         Point emptySpot;
         int gridSize,  NumberOfMoves, highScore, NumChanges, tileWidth, gameViewWidth;
-        string userName;
+        string userName, highscoreString;
         int[][] board;
         PuzzleSolver solver = null;
         readonly Random rnd = new Random(Guid.NewGuid().GetHashCode());
@@ -53,7 +53,9 @@ namespace XamarinAndroidCleverPuzzle
             editor = pref.Edit();
             effects_enabled = pref.GetBoolean("EffectPreference", true);
             gridSize = pref.GetInt("gridSize", 3);
-            highScore = pref.GetInt("highScore", 0);
+           
+            highscoreString = "highScore" + gridSize.ToString() + "Grids";
+            highScore = pref.GetInt(highscoreString , 0);
 
             audioManager = (AudioManager)GetSystemService(AudioService);
             if (effects_enabled)
@@ -109,28 +111,24 @@ namespace XamarinAndroidCleverPuzzle
                     board[ row][col] = coordsArray[tileIndex] - 1;
 
                     // Create the tile (TextTileView)
-                    TextTileView textTile = new TextTileView(this);
-
-                    // Set the tile with the layout parameter
-                    textTile.LayoutParameters = GetTileLayoutParams(row, col);
-
+                    TextTileView textTile = new TextTileView(this)
+                    {
+                        // Set the tile with the layout parameter
+                        LayoutParameters = GetTileLayoutParams(row, col),
+                        TextSize = 40,
+                        Text = coordsArray[tileIndex].ToString(),
+                        Gravity = GravityFlags.Center,
+                        PositionX = row,
+                        PositionY = col
+                    };
                     textTile.SetBackgroundColor(Color.Green);
-                    textTile.Text = coordsArray[tileIndex].ToString();
                     textTile.SetTextColor(Color.Black);
-                    textTile.TextSize = 40;
-                    textTile.Gravity = GravityFlags.Center;
-                    textTile.PositionX = row;
-                    textTile.PositionY = col;
-
                     // Subscribe to the tile's Touch event handler
                     textTile.Touch += TileTouched;
-
                     // Add the tile to the game's grid layout
                     mainLayout.AddView(textTile);
-
                     // Keep the tile and its coordenate in the arrays
-                    tilesArray.Add(textTile);
-                   
+                    tilesArray.Add(textTile);                   
                     tileIndex++;
                 }
             }
@@ -172,15 +170,15 @@ namespace XamarinAndroidCleverPuzzle
                     if (CheckCorrect() )   // player won!
                     {
                         bool newHighScore = false;
-                        // update high score
+                        // update high score in shared settings
                         if (NumberOfMoves < highScore || highScore == 0)
                         {
-                            highScore = NumberOfMoves;
-                            editor.PutInt("highScore", highScore);
+                            highScore = NumberOfMoves;                            
+                            editor.PutInt(highscoreString, highScore);
                             editor.Apply();                           
                             newHighScore = true;
                         }
-                            var fragmentTrans = FragmentManager.BeginTransaction();
+                        var fragmentTrans = FragmentManager.BeginTransaction();
                         fragmentTrans.AddToBackStack(null);
                         var gameOverDialog = GameOverDialogFragment.NewInstance(gridSize, NumberOfMoves, highScore , userName, newHighScore);
                         gameOverDialog.RestartGameEvent += Reset;
@@ -188,8 +186,7 @@ namespace XamarinAndroidCleverPuzzle
                         gameOverDialog.Cancelable = false;
                         gameOverDialog.Show(fragmentTrans, "GameOverDialog");
                     }
-                    ResetSolver();
-                   
+                    ResetSolver();                   
                     movesTextView.Text = string.Format("Moves: {0}", NumberOfMoves.ToString());
                     if (effects_enabled)
                     {
@@ -206,9 +203,11 @@ namespace XamarinAndroidCleverPuzzle
             GridLayout.Spec colSpec = GridLayout.InvokeSpec(y);
 
             // Create a new layout parameter object for the tile using the previous specs
-            GridLayout.LayoutParams tileLayoutParams = new GridLayout.LayoutParams(rowSpec, colSpec);
-            tileLayoutParams.Width = tileWidth - 10;
-            tileLayoutParams.Height = tileWidth - 10;
+            GridLayout.LayoutParams tileLayoutParams = new GridLayout.LayoutParams(rowSpec, colSpec)
+            {
+                Width = tileWidth - 10,
+                Height = tileWidth - 10
+            };
             tileLayoutParams.SetMargins(5, 5, 5, 5);
             return tileLayoutParams;
         }
